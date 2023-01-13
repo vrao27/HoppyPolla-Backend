@@ -1,0 +1,26 @@
+# Ignore all files ending in ".env"
+*.env
+
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore the MongoDB data directory
+data/
+
+# Ignore the MongoDB log files
+*.log
+
+# Ignore the MongoDB configuration file
+mongod.conf
+
+# Ignore the MongoDB lock file
+mongod.lock
+
+# Ignore the MongoDB PID file
+mongod.pid
+
+# Ignore the MongoDB log file backup directory
+log/
+
+# Ignore the mongoose models directory
+models/

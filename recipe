@@ -1,0 +1,54 @@
+[
+	{
+		"title": {
+            "name": "Witbier",
+            "category":"Belgian",
+			"defaultQty": 10,
+            "image": "witbier-im-url"
+		},
+		"description": {
+			"text": "A refreshing, light-bodied Belgian wheat beer with citrus and spice notes.",
+			"originalGravity": 1.046,
+			"bitterness": 15,
+			"color": 3,
+			"alcohol": 4.8
+		},
+		"brewingWater": {
+			"mainInfusion": "13.5 liters",
+			"sparge": "5.6 liters",
+			"total": "18.9 liters"
+		},
+		"mashGrains": {
+			"grainType": "2-row, wheat malt"
+		},
+		"mashSchedule": {
+			"rest1": {
+				"temperature": 66.7,
+				"time": 60
+			},
+			"rest2": {
+				"temperature": 76,
+				"time": 10
+			},
+			"rest3": {
+				"temperature": "Number",
+				"time": "Number"
+			},
+			"mashIn": 66.7,
+			"mashOut": 76
+		},
+		"boil": {
+			"time": 60,
+			"hop_type": "Hallertauer",
+			"hop_add_on": "Orange peel and Coriander Seeds"
+		},
+		"fermentation": {
+			"yeast": "Belgian witbier yeast",
+			"fermentationTemperature": 20,
+			"finalGravity": 1.01,
+			"carbonation": 2.5
+		},
+		"_id": "639b1a4f36e2d432426bfe87",
+		"__v": 0
+	}
+]
