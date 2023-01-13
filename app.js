@@ -24,14 +24,28 @@ app.use("/api/brewrecipes", brewrecipeRoutes);
 app.use("/api/user", userRoutes);
 
 //connect to db
+// mongoose
+//   .connect(process.env.MONGO_URI)
+//   .then(() => {
+//     //Port listen to requests
+//     app.listen(process.env.PORT, () => {
+//       console.log(`Server listening on port`, process.env.PORT);
+//     });
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+
 mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    //Port listen to requests
-    app.listen(process.env.PORT, () => {
-      console.log(`Server listening on port`, process.env.PORT);
-    });
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => {
+//Port listen to requests
+app.listen(process.env.PORT, () => {
+console.log("Server listening on port", process.env.PORT);
+});
+})
+.catch((error) => {
+console.log(error);
+});
+  
