@@ -23,4 +23,3 @@ mongod.pid
 log/
 
 # Ignore the mongoose models directory
-models/
