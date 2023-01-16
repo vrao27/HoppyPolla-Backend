@@ -11,7 +11,7 @@ mongoose.set("strictQuery", false);
 
 //setting up basic middleware and ivoking next so the following steps will be carried out
 //we can log the path and request
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(express.json());
 app.use((req, res, next) => {
   console.log(req.path, req.method);
