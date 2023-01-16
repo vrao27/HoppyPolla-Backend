@@ -1,4 +1,4 @@
-const Recipe = require("../Models/recipemodel.js");
+const Recipe = require("../models/recipemodel.js");
 const mongoose = require("mongoose");
 
 //all of the following functions are async
