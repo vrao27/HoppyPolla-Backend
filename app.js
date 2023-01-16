@@ -2,10 +2,10 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const app = express();
-const brewrecipeRoutes = require("./routes/brewrecipes");
+const brewrecipeRoutes = require("./routes/brewrecipes.js");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const userRoutes = require("./routes/user");
+const userRoutes = require("./routes/user.js");
 // Set the strictQuery option to false
 mongoose.set("strictQuery", false);
 const port = process.env.PORT || 5000;
