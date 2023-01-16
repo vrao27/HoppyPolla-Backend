@@ -5,9 +5,10 @@ const app = express();
 const brewrecipeRoutes = require("./routes/brewrecipes");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const userRoutes = require('./routes/user')
+const userRoutes = require("./routes/user");
 // Set the strictQuery option to false
 mongoose.set("strictQuery", false);
+const port = process.env.PORT || 5000;
 
 //setting up basic middleware and ivoking next so the following steps will be carried out
 //we can log the path and request
@@ -36,16 +37,17 @@ app.use("/api/user", userRoutes);
 //     console.log(error);
 //   });
 
-
 mongoose
-.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-.then(() => {
-//Port listen to requests
-app.listen(process.env.PORT, () => {
-console.log("Server listening on port", process.env.PORT);
-});
-})
-.catch((error) => {
-console.log(error);
-});
-  
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    //Port listen to requests
+    app.listen(port, () => {
+      console.log(`Server listening on port ${port}`);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
