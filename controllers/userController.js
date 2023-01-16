@@ -1,4 +1,4 @@
-const User = require("../models/usermodel.js");
+const User = require("../models/usermodel");
 const jwt = require("jsonwebtoken");
 
 // create token to be used in login and signup controller functions
