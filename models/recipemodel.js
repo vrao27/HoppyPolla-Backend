@@ -13,7 +13,7 @@ const recipeSchema = new Schema({
       type: String,
       required: true
     },
-    defaultQty: {
+    batchVolume: {
       type: Number,
       required: true
     },
@@ -62,6 +62,10 @@ const recipeSchema = new Schema({
     grainType: {
       type: String,
       required: true
+    },
+    amount: {
+      type: Number,
+      required: true
     }
   },
   mashSchedule: {
@@ -109,15 +113,22 @@ const recipeSchema = new Schema({
       type: Number,
       required: true
     },
-    hop_type: {
-      type: String,
-      required: true
-    },
-    hop_add_on: {
-      type: String,
-      required: true
-    }
+    hops: [{
+      type: {
+        type: String,
+        required: true
+      },
+      amount: {
+        type: Number,
+        required: true
+      },
+      boilingTime: {
+        type: Number,
+        required: true
+      }
+    }]
   },
+
   fermentation: {
     yeast: {
       type: String,
