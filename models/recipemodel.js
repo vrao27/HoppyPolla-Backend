@@ -5,18 +5,16 @@ const Schema = mongoose.Schema;
 //pass in object for the schema
 const recipeSchema = new Schema({
   title: {
-    name: {
-      type: String,
-      required: true
-    },
-    category: {
-      type: String,
-      required: true
-    },
-    batchVolume: {
-      type: Number,
-      required: true
-    },
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
+  batchVolume: {
+    type: Number,
+    required: true
   },
   description: {
     text: {
@@ -42,19 +40,19 @@ const recipeSchema = new Schema({
   },
   brewingWater: {
     mainInfusion: {
-      type: String,
+      type: Number,
       required: true
     },
     sparge: {
-      type: String,
+      type: Number,
       required: true
     },
     total: {
-      type: String,
+      type: Number,
       required: true
     }
   },
-  mashGrains: {
+  mashGrains: [{
     grainType: {
       type: String,
       required: true
@@ -63,7 +61,7 @@ const recipeSchema = new Schema({
       type: Number,
       required: true
     }
-  },
+  }],
   mashSchedule: {
     mashIn: {
       type: Number,
@@ -91,11 +89,11 @@ const recipeSchema = new Schema({
     },
     rest3: {
       temperature: {
-        type: String,
+        type: Number,
         required: false
       },
       time: {
-        type: String,
+        type: Number,
         required: false
       }
     },
