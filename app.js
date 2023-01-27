@@ -18,7 +18,7 @@ app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
 });
-app.use(cors({ origin: "https://stupendous-torrone-fe3419.netlify.app", credentials: true }));
+app.use(cors({ origin: ["https://stupendous-torrone-fe3419.netlify.app", "http://localhost:5000"], credentials: true }));
 
 //routes
 app.use("/api/brewrecipes", brewrecipeRoutes);
