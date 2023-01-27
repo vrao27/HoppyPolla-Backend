@@ -126,9 +126,22 @@ const recipeSchema = new Schema({
         type: Number,
         required: true
       }
+    }],
+    addOns: [{
+      type: {
+        type: String,
+        required: true
+      },
+      amount: {
+        type: Number,
+        required: true
+      },
+      boilingTime: {
+        type: Number,
+        required: true
+      }
     }]
   },
-
   fermentation: {
     yeast: {
       type: String,
